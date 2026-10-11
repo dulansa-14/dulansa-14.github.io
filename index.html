@@ -8,10 +8,10 @@
     <title>Binadi Dulansa | Biotechnology Portfolio</title>
 
     <meta name="description"
-        content="Binadi Dulansa's academic portfolio showcasing biotechnology education, skills, projects and career goals.">
+        content="Binadi Dulansa's academic portfolio showcasing biotechnology education, skills, projects, hobbies and career goals.">
 
     <style>
-        /* ---------- GENERAL STYLES ---------- */
+        /* GENERAL STYLES */
 
         :root {
             --green: #456b50;
@@ -32,7 +32,7 @@
 
         html {
             scroll-behavior: smooth;
-            scroll-padding-top: 90px;
+            scroll-padding-top: 100px;
         }
 
         body {
@@ -53,7 +53,7 @@
         }
 
 
-        /* ---------- NAVIGATION BAR ---------- */
+        /* NAVIGATION BAR */
 
         header {
             background-color: var(--white);
@@ -84,12 +84,12 @@
             align-items: center;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 17px;
+            gap: 15px;
         }
 
         nav a {
             color: var(--text);
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;
             transition: color 0.3s;
         }
@@ -99,7 +99,7 @@
         }
 
 
-        /* ---------- COMMON SECTION STYLES ---------- */
+        /* COMMON SECTION STYLES */
 
         section {
             padding: 75px 0;
@@ -128,7 +128,7 @@
         }
 
 
-        /* ---------- HOME SECTION ---------- */
+        /* HOME */
 
         #home {
             background: linear-gradient(
@@ -136,7 +136,6 @@
                 var(--light-green),
                 var(--cream)
             );
-
             padding: 85px 0;
         }
 
@@ -149,6 +148,7 @@
 
         .hero-content {
             flex: 1;
+            min-width: 0;
         }
 
         .hero-content .welcome {
@@ -219,7 +219,7 @@
         }
 
 
-        /* ---------- ABOUT ME ---------- */
+        /* ABOUT ME */
 
         #about {
             background-color: var(--white);
@@ -244,7 +244,7 @@
         }
 
 
-        /* ---------- EDUCATION ---------- */
+        /* EDUCATION */
 
         .education-grid {
             display: grid;
@@ -273,10 +273,11 @@
         .education-card .year {
             color: var(--muted);
             font-size: 14px;
+            margin-bottom: 10px;
         }
 
 
-        /* ---------- SKILLS AND COMPETENCIES ---------- */
+        /* SKILLS AND COMPETENCIES */
 
         #skills {
             background-color: var(--white);
@@ -284,10 +285,7 @@
 
         .skills-grid {
             display: grid;
-
-            /* All skill boxes follow the same layout */
             grid-template-columns: repeat(3, minmax(0, 1fr));
-
             gap: 22px;
             align-items: stretch;
         }
@@ -297,17 +295,14 @@
             flex-direction: column;
             align-items: flex-start;
             justify-content: flex-start;
-
             width: 100%;
             min-width: 0;
-            min-height: 155px;
+            min-height: 165px;
             height: 100%;
-
             padding: 24px;
             background-color: var(--cream);
             border: 1px solid var(--border);
             border-radius: 12px;
-
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
@@ -339,7 +334,7 @@
         }
 
 
-        /* ---------- PROJECTS ---------- */
+        /* PROJECTS */
 
         .projects-grid {
             display: grid;
@@ -379,6 +374,14 @@
             font-size: 15px;
         }
 
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-top: auto;
+            padding-top: 18px;
+        }
+
         .project-tag {
             display: inline-block;
             background-color: var(--light-green);
@@ -387,20 +390,57 @@
             font-weight: bold;
             padding: 5px 10px;
             border-radius: 20px;
-            margin-top: auto;
-            margin-right: 5px;
-            align-self: flex-start;
-        }
-
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 7px;
-            margin-top: 18px;
         }
 
 
-        /* ---------- CAREER GOALS ---------- */
+        /* HOBBIES AND INTERESTS */
+
+        #hobbies {
+            background-color: var(--white);
+        }
+
+        .hobbies-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+            align-items: stretch;
+        }
+
+        .hobby-card {
+            background-color: var(--cream);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+            min-width: 0;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .hobby-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(40, 65, 45, 0.09);
+        }
+
+        .hobby-icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .hobby-card h3 {
+            color: var(--dark-green);
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .hobby-card p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+
+        /* CAREER GOALS */
 
         #career {
             background-color: var(--white);
@@ -426,7 +466,7 @@
         }
 
 
-        /* ---------- LEARNING REFLECTION ---------- */
+        /* LEARNING REFLECTION */
 
         .reflection-card {
             max-width: 900px;
@@ -443,7 +483,7 @@
         }
 
 
-        /* ---------- CV SECTION ---------- */
+        /* CV */
 
         #cv {
             background: linear-gradient(
@@ -475,7 +515,7 @@
         }
 
 
-        /* ---------- CONTACT ---------- */
+        /* CONTACT */
 
         #contact {
             background-color: var(--white);
@@ -506,7 +546,7 @@
         }
 
 
-        /* ---------- FOOTER ---------- */
+        /* FOOTER */
 
         footer {
             background-color: var(--dark-green);
@@ -520,7 +560,7 @@
         }
 
 
-        /* ---------- TABLET RESPONSIVE DESIGN ---------- */
+        /* TABLET RESPONSIVE DESIGN */
 
         @media (max-width: 850px) {
 
@@ -540,7 +580,8 @@
                 font-size: 36px;
             }
 
-            .skills-grid {
+            .skills-grid,
+            .hobbies-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
@@ -551,7 +592,7 @@
         }
 
 
-        /* ---------- MOBILE RESPONSIVE DESIGN ---------- */
+        /* MOBILE RESPONSIVE DESIGN */
 
         @media (max-width: 600px) {
 
@@ -577,7 +618,7 @@
             }
 
             nav {
-                gap: 10px 14px;
+                gap: 10px 13px;
             }
 
             nav a {
@@ -620,7 +661,8 @@
                 font-size: 14px;
             }
 
-            .skills-grid {
+            .skills-grid,
+            .hobbies-grid {
                 grid-template-columns: minmax(0, 1fr);
                 gap: 15px;
             }
@@ -628,6 +670,10 @@
             .skill-card {
                 min-height: 0;
                 padding: 20px;
+            }
+
+            .hobby-card {
+                padding: 22px;
             }
 
             .education-grid,
@@ -668,6 +714,7 @@
                 <a href="#education">Education</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
+                <a href="#hobbies">Hobbies</a>
                 <a href="#career">Career Goals</a>
                 <a href="#reflection">Reflection</a>
                 <a href="#cv">CV</a>
@@ -787,7 +834,7 @@
 
         <div class="container">
 
-            <h2 class="section-title">Education</h2>
+            <h2 class="section-title">Educational Qualifications</h2>
 
             <p class="section-description">
                 My educational background and academic qualifications.
@@ -910,174 +957,113 @@
             <div class="skills-grid">
 
                 <div class="skill-card">
-
                     <div class="skill-icon">🧪</div>
-
                     <h3>Laboratory Skills</h3>
-
                     <p>
                         Developing practical laboratory skills,
                         following experimental procedures and
                         maintaining laboratory safety.
                     </p>
-
                 </div>
 
-
                 <div class="skill-card">
-
                     <div class="skill-icon">🔬</div>
-
                     <h3>Scientific Research</h3>
-
                     <p>
                         Finding scientific information, exploring
-                        biological topics and developing research
-                        skills.
+                        biological topics and developing research skills.
                     </p>
-
                 </div>
 
-
                 <div class="skill-card">
-
                     <div class="skill-icon">💻</div>
-
                     <h3>Microsoft Office</h3>
-
                     <p>
-                        Using Microsoft Word, Excel, and PowerPoint
+                        Using Microsoft Word, Excel and PowerPoint
                         for assignments, presentations and organising
                         information.
                     </p>
-
                 </div>
 
-
                 <div class="skill-card">
-
                     <div class="skill-icon">📊</div>
-
                     <h3>Data Entry</h3>
-
                     <p>
                         Organising information carefully and entering
                         data with attention to accuracy and detail.
                     </p>
-
                 </div>
 
-
                 <div class="skill-card">
-
                     <div class="skill-icon">🌐</div>
-
                     <h3>Internet Research</h3>
-
                     <p>
                         Searching for relevant information and using
                         online resources to support academic learning.
                     </p>
-
                 </div>
 
-
                 <div class="skill-card">
-
                     <div class="skill-icon">🎯</div>
-
                     <h3>Attention to Detail</h3>
-
                     <p>
                         Paying attention to instructions, accuracy,
                         organisation and the quality of academic work.
                     </p>
-
                 </div>
 
-
                 <div class="skill-card">
-
                     <div class="skill-icon">🤝</div>
-
                     <h3>Teamwork</h3>
-
                     <p>
                         Collaborating with classmates during group
                         assignments, discussions and presentations.
                     </p>
-
                 </div>
 
-
                 <div class="skill-card">
-
                     <div class="skill-icon">⏰</div>
-
                     <h3>Time Management</h3>
-
                     <p>
                         Organising academic tasks and working towards
                         completing assignments within deadlines.
                     </p>
-
                 </div>
 
-
                 <div class="skill-card">
-
                     <div class="skill-icon">🧩</div>
-
                     <h3>Problem-Solving</h3>
-
                     <p>
                         Approaching academic challenges logically and
-                        developing solutions through learning and
-                        practice.
+                        developing solutions through learning and practice.
                     </p>
-
                 </div>
 
-
                 <div class="skill-card">
-
                     <div class="skill-icon">🖥️</div>
-
                     <h3>Basic IT Skills</h3>
-
                     <p>
                         Using computer applications and developing
                         digital skills for academic activities.
                     </p>
-
                 </div>
 
-
                 <div class="skill-card language-card">
-
                     <div class="skill-icon">🗣️</div>
-
                     <h3>Languages</h3>
-
                     <p>
                         Sinhala – Native proficiency<br>
                         English – Professional proficiency
                     </p>
-
                 </div>
 
-
                 <div class="skill-card">
-
                     <div class="skill-icon">🌱</div>
-
                     <h3>Continuous Learning</h3>
-
                     <p>
                         Willingness to learn new concepts, improve
                         existing abilities and develop professionally.
                     </p>
-
                 </div>
 
             </div>
@@ -1115,13 +1101,9 @@
                     </p>
 
                     <div class="project-tags">
-
                         <span class="project-tag">Biotechnology</span>
-
                         <span class="project-tag">Bioinformatics</span>
-
                         <span class="project-tag">Research</span>
-
                     </div>
 
                 </div>
@@ -1141,13 +1123,9 @@
                     </p>
 
                     <div class="project-tags">
-
                         <span class="project-tag">Genetic Engineering</span>
-
                         <span class="project-tag">Plant Biotechnology</span>
-
                         <span class="project-tag">Teamwork</span>
-
                     </div>
 
                 </div>
@@ -1167,13 +1145,9 @@
                     </p>
 
                     <div class="project-tags">
-
                         <span class="project-tag">mRNA Research</span>
-
                         <span class="project-tag">Presentation</span>
-
                         <span class="project-tag">Communication</span>
-
                     </div>
 
                 </div>
@@ -1193,13 +1167,9 @@
                     </p>
 
                     <div class="project-tags">
-
                         <span class="project-tag">Ethics</span>
-
                         <span class="project-tag">Critical Thinking</span>
-
                         <span class="project-tag">Teamwork</span>
-
                     </div>
 
                 </div>
@@ -1219,13 +1189,9 @@
                     </p>
 
                     <div class="project-tags">
-
                         <span class="project-tag">Laboratory</span>
-
                         <span class="project-tag">Observation</span>
-
                         <span class="project-tag">Data Recording</span>
-
                     </div>
 
                 </div>
@@ -1244,14 +1210,102 @@
                     </p>
 
                     <div class="project-tags">
-
                         <span class="project-tag">IT</span>
-
                         <span class="project-tag">MS Office</span>
-
                         <span class="project-tag">Digital Skills</span>
-
                     </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOBBIES AND INTERESTS -->
+
+    <section id="hobbies">
+
+        <div class="container">
+
+            <h2 class="section-title">Hobbies &amp; Interests</h2>
+
+            <p class="section-description">
+                Activities and interests that inspire me, support
+                personal growth, and encourage continuous learning.
+            </p>
+
+            <div class="hobbies-grid">
+
+                <div class="hobby-card">
+
+                    <div class="hobby-icon">🌿</div>
+
+                    <h3>Exploring Nature</h3>
+
+                    <p>
+                        Enjoying natural surroundings and appreciating
+                        the beauty and diversity of the natural world.
+                    </p>
+
+                </div>
+
+
+                <div class="hobby-card">
+
+                    <div class="hobby-icon">📷</div>
+
+                    <h3>Photography</h3>
+
+                    <p>
+                        Capturing meaningful moments, beautiful
+                        landscapes and inspiring scenes.
+                    </p>
+
+                </div>
+
+
+                <div class="hobby-card">
+
+                    <div class="hobby-icon">💻</div>
+
+                    <h3>Learning New Technologies</h3>
+
+                    <p>
+                        Exploring digital tools and developing
+                        new skills that support personal and
+                        academic development.
+                    </p>
+
+                </div>
+
+
+                <div class="hobby-card">
+
+                    <div class="hobby-icon">🎵</div>
+
+                    <h3>Listening to Music</h3>
+
+                    <p>
+                        Enjoying music during leisure time as a
+                        relaxing and enjoyable activity.
+                    </p>
+
+                </div>
+
+
+                <div class="hobby-card">
+
+                    <div class="hobby-icon">📚</div>
+
+                    <h3>Reading &amp; Learning</h3>
+
+                    <p>
+                        Exploring new ideas, learning interesting
+                        facts and broadening my knowledge.
+                    </p>
 
                 </div>
 
@@ -1286,16 +1340,14 @@
                     in academic communication and presentations.
                 </p>
 
-
                 <h3>Medium-Term Goals</h3>
 
                 <p>
-                    To explore genetics, molecular biology, and
+                    To explore genetics, molecular biology and
                     bioinformatics in greater depth. I aim to develop
                     knowledge of computational approaches that can
                     support biological research and data analysis.
                 </p>
-
 
                 <h3>Long-Term Goals</h3>
 
@@ -1306,7 +1358,6 @@
                     biological data analysis and computational
                     approaches to scientific research.
                 </p>
-
 
                 <h3>My Motivation</h3>
 
@@ -1345,7 +1396,7 @@
                     As a first-year Biotechnology undergraduate,
                     I am beginning to understand the importance
                     of combining scientific knowledge with practical
-                    skills, communication, and independent learning.
+                    skills, communication and independent learning.
                     My university activities have introduced me to
                     different areas of biotechnology and their
                     real-world applications.
@@ -1354,16 +1405,16 @@
                 <p>
                     Preparing assignments and presentations has
                     helped me develop my research, organisation,
-                    teamwork, and communication skills. Laboratory
+                    teamwork and communication skills. Laboratory
                     practicals have also helped me appreciate the
                     importance of accuracy, following instructions,
-                    safety and recording observations carefully.
+                    safety, and recording observations carefully.
                 </p>
 
                 <p>
                     These learning experiences have shown me that
                     developing scientific knowledge takes time,
-                    practice, and continuous improvement. I recognise
+                    practice and continuous improvement. I recognise
                     the importance of improving my presentation
                     techniques, digital skills and confidence when
                     explaining scientific concepts.
