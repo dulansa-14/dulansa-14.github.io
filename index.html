@@ -1,42 +1,663 @@
-<!--
-                    Upload your PDF to the repository root and name it:
-                    Binadi_Dulansa_CV.pdf
-                    Then this download button will work.
-                -->
-                <a href="Binadi_Dulansa_CV.pdf"
-                   class="button button-primary"
-                   download>
-                    ↓ Download My CV
-                </a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Binadi Dulansa | Biotechnology Portfolio</title>
+
+    <meta name="description" content="The academic portfolio of Binadi Dulansa, a Biotechnology undergraduate at SLIIT.">
+
+    <style>
+        :root {
+            --green: #526b57;
+            --dark-green: #304b3a;
+            --light-green: #e5ede3;
+            --cream: #faf8f1;
+            --white: #ffffff;
+            --text: #344139;
+            --muted: #69766d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        header {
+            background: var(--white);
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #e4e8e0;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--dark-green);
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        nav a {
+            font-size: 14px;
+            color: var(--text);
+        }
+
+        nav a:hover {
+            color: var(--green);
+        }
+
+        .hero {
+            padding: 90px 8%;
+            background: linear-gradient(135deg, #e5ede3, #faf8f1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .hero-content {
+            flex: 1 1 350px;
+        }
+
+        .tag {
+            color: var(--green);
+            font-weight: bold;
+            letter-spacing: 2px;
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: clamp(35px, 5vw, 55px);
+            line-height: 1.2;
+            color: var(--dark-green);
+            margin: 18px 0;
+        }
+
+        .hero p {
+            max-width: 600px;
+            color: var(--muted);
+            font-size: 17px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 23px;
+            background: var(--green);
+            color: var(--white);
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: var(--dark-green);
+            transform: translateY(-2px);
+        }
+
+        .photo-placeholder {
+            width: 210px;
+            height: 210px;
+            border-radius: 50%;
+            background: var(--white);
+            border: 5px solid #d0ddcf;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--green);
+            font-size: 48px;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin: auto;
+        }
+
+        section {
+            padding: 65px 8%;
+            scroll-margin-top: 20px;
+        }
+
+        .section-title {
+            font-size: 30px;
+            color: var(--dark-green);
+            margin-bottom: 10px;
+        }
+
+        .section-intro {
+            color: var(--muted);
+            margin-bottom: 30px;
+            max-width: 700px;
+        }
+
+        .about {
+            background: var(--white);
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 22px;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #e5e9e1;
+            box-shadow: 0 4px 15px rgba(48, 75, 58, 0.05);
+        }
+
+        .card h3 {
+            color: var(--green);
+            margin-bottom: 10px;
+            font-size: 19px;
+        }
+
+        .card p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        .year {
+            display: inline-block;
+            background: var(--light-green);
+            color: var(--dark-green);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-bottom: 12px;
+        }
+
+        .skills {
+            background: var(--white);
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 22px;
+        }
+
+        .skill {
+            background: var(--light-green);
+            color: var(--dark-green);
+            padding: 10px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .goals {
+            background: var(--light-green);
+        }
+
+        .reflection {
+            background: var(--white);
+        }
+
+        .contact-box {
+            background: var(--dark-green);
+            color: var(--white);
+            padding: 35px;
+            border-radius: 12px;
+            margin-top: 25px;
+        }
+
+        .contact-box h3 {
+            font-size: 23px;
+            margin-bottom: 12px;
+        }
+
+        .contact-box p {
+            margin-bottom: 8px;
+        }
+
+        .contact-box a {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: #24392c;
+            color: #e7eee7;
+            text-align: center;
+            padding: 22px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 18px 5%;
+            }
+
+            nav {
+                gap: 12px;
+            }
+
+            .hero {
+                padding: 55px 6%;
+                text-align: center;
+            }
+
+            .hero-content {
+                flex-basis: 100%;
+            }
+
+            section {
+                padding: 48px 6%;
+            }
+
+            .photo-placeholder {
+                width: 165px;
+                height: 165px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="#home" class="logo">BD. Portfolio</a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#goals">Goals</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HOME -->
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+                <span class="tag">Biotechnology Undergraduate</span>
+
+                <h1>Hi, I'm<br>Binadi Dulansa.</h1>
+
+                <p>
+                    Exploring the world of biotechnology through science,
+                    research, creativity and continuous learning.
+                    Welcome to my academic portfolio.
+                </p>
+
+                <a href="#about" class="button">Discover My Journey</a>
             </div>
+
+            <!-- Your photograph can be added here later -->
+            <div class="photo-placeholder" aria-label="Photo placeholder">
+                BD
+            </div>
+
         </section>
 
-        <section class="contact-section" id="contact">
-            <div class="section-heading">
-                <p>Let's Connect</p>
-                <h2>Contact Me</h2>
-                <div class="line"></div>
-            </div>
+        <!-- ABOUT ME -->
+        <section class="about" id="about">
 
-            <p>
-                Thank you for visiting my e-portfolio.
-                Feel free to contact me by email.
+            <h2 class="section-title">About Me</h2>
+
+            <p class="section-intro">
+                A little introduction about my academic journey,
+                interests and aspirations.
             </p>
 
-            <a class="contact-email"
-               href="mailto:dulansabinadi@gmail.com">
-                dulansabinadi@gmail.com
+            <p>
+                I am a first-year Biotechnology undergraduate at
+                Sri Lanka Institute of Information Technology (SLIIT).
+                I am interested in laboratory practices, scientific
+                research, biotechnology and quality assurance.
+            </p>
+
+            <br>
+
+            <p>
+                I hope to strengthen my scientific knowledge, develop
+                technical and analytical skills, and gain practical
+                experience throughout my university journey. I believe
+                in learning step by step, working collaboratively and
+                approaching new challenges with curiosity and dedication.
+            </p>
+
+        </section>
+
+        <!-- EDUCATION -->
+        <section id="education">
+
+            <h2 class="section-title">Educational Qualifications</h2>
+
+            <p class="section-intro">
+                My academic background and educational achievements.
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+                    <span class="year">2026 – Present</span>
+                    <h3>BSc (Hons) in Biotechnology</h3>
+                    <p>
+                        Sri Lanka Institute of Information Technology
+                        (SLIIT)
+                    </p>
+                </article>
+
+                <article class="card">
+                    <span class="year">2025</span>
+                    <h3>Diploma in Information Technology</h3>
+                    <p>ESOFT Metro Campus</p>
+                </article>
+
+                <article class="card">
+                    <span class="year">2025</span>
+                    <h3>Diploma in English</h3>
+                    <p>ESOFT Metro Campus</p>
+                </article>
+
+                <article class="card">
+                    <span class="year">2020</span>
+                    <h3>GCE Advanced Level</h3>
+                    <p>Biology stream — all subjects passed.</p>
+                </article>
+
+                <article class="card">
+                    <span class="year">2023</span>
+                    <h3>GCE Ordinary Level</h3>
+                    <p>All subjects passed.</p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- SKILLS -->
+        <section class="skills" id="skills">
+
+            <h2 class="section-title">Skills & Competencies</h2>
+
+            <p class="section-intro">
+                Skills I have developed through my education,
+                academic activities and practical learning.
+            </p>
+
+            <div class="skill-list">
+                <span class="skill">Laboratory Skills</span>
+                <span class="skill">Scientific Research</span>
+                <span class="skill">Attention to Detail</span>
+                <span class="skill">Microsoft Word</span>
+                <span class="skill">Microsoft Excel</span>
+                <span class="skill">Microsoft PowerPoint</span>
+                <span class="skill">Internet Research</span>
+                <span class="skill">Data Entry</span>
+                <span class="skill">Basic Troubleshooting</span>
+                <span class="skill">Teamwork</span>
+                <span class="skill">Time Management</span>
+            </div>
+
+            <div class="cards">
+
+                <article class="card">
+                    <h3>Language Skills</h3>
+                    <p>
+                        Sinhala — Native proficiency<br>
+                        English — Professional proficiency
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Personal Strengths</h3>
+                    <p>
+                        Willingness to learn, attention to detail,
+                        teamwork and a responsible approach to tasks.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects">
+
+            <h2 class="section-title">Academic Projects</h2>
+
+            <p class="section-intro">
+                Selected projects and academic activities related
+                to biotechnology, scientific communication and IT.
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+                    <h3>01. Golden Biotechnology & Bioinformatics</h3>
+                    <p>
+                        Explored the role of bioinformatics in
+                        biotechnology, including the use of biological
+                        data and computational tools in research.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>02. Firefly Petunia</h3>
+                    <p>
+                        Learned about biotechnology and genetic
+                        engineering through a project exploring
+                        the development of the glowing Firefly Petunia.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>03. Dr. Katalin Karikó</h3>
+                    <p>
+                        Prepared an academic presentation about
+                        scientific contributions to mRNA technology
+                        and the importance of persistence in research.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>04. Synthetic Biology Debate</h3>
+                    <p>
+                        Explored the benefits, ethical considerations,
+                        environmental concerns and safety challenges
+                        associated with synthetic biology.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>05. Laboratory Practicals</h3>
+                    <p>
+                        Developed practical scientific knowledge
+                        through laboratory activities, observations,
+                        experimental procedures and data recording.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>06. Information Technology Activities</h3>
+                    <p>
+                        Developed digital skills through academic
+                        activities involving document preparation,
+                        presentations and information management.
+                    </p>
+                </article>
+
+            </div>
+
+            <p style="margin-top: 22px; color: var(--muted); font-size: 14px;">
+                Note: These entries describe academic activities.
+                They do not represent professional employment.
+            </p>
+
+        </section>
+
+        <!-- CAREER GOALS -->
+        <section class="goals" id="goals">
+
+            <h2 class="section-title">Career Goals</h2>
+
+            <p class="section-intro">
+                My aspirations for the future.
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+                    <h3>Short-Term Goals</h3>
+                    <p>
+                        Build a strong foundation in biotechnology,
+                        improve laboratory techniques and strengthen
+                        my academic and digital skills.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Future Development</h3>
+                    <p>
+                        Explore scientific research, molecular biology,
+                        bioinformatics and the application of data
+                        analysis in biotechnology.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Long-Term Aspirations</h3>
+                    <p>
+                        Pursue a career in the biotechnology or
+                        pharmaceutical industry, with an interest
+                        in research, quality assurance and analytical
+                        approaches to biological problems.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- LEARNING REFLECTION -->
+        <section class="reflection" id="reflection">
+
+            <h2 class="section-title">Learning Reflection</h2>
+
+            <p class="section-intro">
+                Learning is a continuous process of discovery,
+                reflection and improvement.
+            </p>
+
+            <p>
+                My academic journey has helped me understand the
+                connection between biotechnology, information
+                technology and scientific research. Through
+                presentations, group activities and laboratory
+                practicals, I have had opportunities to develop
+                my communication, teamwork and technical skills.
+            </p>
+
+            <br>
+
+            <p>
+                I have also learned the importance of preparation,
+                clear communication, accuracy and responsible
+                scientific thinking. Moving forward, I aim to
+                improve my presentation skills, expand my knowledge
+                and become more confident in applying what I learn.
+            </p>
+
+        </section>
+
+        <!-- CV -->
+        <section id="cv">
+
+            <h2 class="section-title">My Resume</h2>
+
+            <p class="section-intro">
+                View or download my resume to learn more about
+                my educational background and skills.
+            </p>
+
+            <a class="button"
+               href="Binadi_Dulansa_CV.pdf"
+               download>
+                Download My CV (PDF)
             </a>
+
+            <p style="margin-top: 12px; color: var(--muted); font-size: 13px;">
+                The download button will work after the PDF resume
+                is uploaded to this repository.
+            </p>
+
+        </section>
+
+        <!-- CONTACT -->
+        <section class="about" id="contact">
+
+            <h2 class="section-title">Get in Touch</h2>
+
+            <p class="section-intro">
+                Feel free to contact me regarding academic
+                collaboration or professional opportunities.
+            </p>
+
+            <div class="contact-box">
+                <h3>Let's Connect</h3>
+
+                <p>
+                    Email:
+                    <a href="mailto:dulansabinadi@gmail.com">
+                        dulansabinadi@gmail.com
+                    </a>
+                </p>
+
+                <p>
+                    Institution: Sri Lanka Institute of
+                    Information Technology (SLIIT)
+                </p>
+
+                <p>
+                    Field: Biotechnology
+                </p>
+            </div>
+
         </section>
 
     </main>
 
     <footer>
         <p>
-            © 2026 Binadi Dulansa Wickramarathna Senarath Yapa
+            © 2026 Binadi Dulansa | Biotechnology Academic Portfolio
         </p>
+
         <p>
-            Academic E-Portfolio | SC1172: Introduction to Information Technology
+            Designed with curiosity, creativity and a passion for science.
         </p>
     </footer>
 
