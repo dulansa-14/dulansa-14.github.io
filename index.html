@@ -121,18 +121,15 @@
             transform: translateY(-2px);
         }
 
-        .photo-placeholder {
+        /* Profile photograph */
+        .profile-photo {
+            display: block;
             width: 210px;
             height: 210px;
             border-radius: 50%;
-            background: var(--white);
+            object-fit: cover;
+            object-position: center;
             border: 5px solid #d0ddcf;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--green);
-            font-size: 48px;
-            font-weight: bold;
             flex-shrink: 0;
             margin: auto;
         }
@@ -250,6 +247,7 @@
             font-size: 13px;
         }
 
+        /* Mobile responsive design */
         @media (max-width: 600px) {
             header {
                 padding: 18px 5%;
@@ -268,23 +266,27 @@
                 flex-basis: 100%;
             }
 
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .profile-photo {
+                width: 165px;
+                height: 165px;
+            }
+
             section {
                 padding: 48px 6%;
             }
 
-            .profile-photo {
-    width: 210px;
-    height: 210px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid #d0ddcf;
-    flex-shrink: 0;
-    margin: auto;
-}
-               .profile-photo {
-    width: 165px;
-    height: 165px;
-}
+            .section-title {
+                font-size: 27px;
+            }
+
+            .contact-box {
+                padding: 25px;
+            }
         }
     </style>
 </head>
@@ -301,6 +303,8 @@
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#goals">Goals</a>
+            <a href="#reflection">Reflection</a>
+            <a href="#cv">CV</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -324,8 +328,11 @@
                 <a href="#about" class="button">Discover My Journey</a>
             </div>
 
-            <img src="binadi.jpg" alt="Binadi Dulansa"
-     class="profile-photo">
+            <img
+                src="binadi.jpg"
+                alt="Binadi Dulansa"
+                class="profile-photo"
+            >
 
         </section>
 
@@ -373,8 +380,7 @@
                     <span class="year">2026 – Present</span>
                     <h3>BSc (Hons) in Biotechnology</h3>
                     <p>
-                        Sri Lanka Institute of Information Technology
-                        (SLIIT)
+                        Sri Lanka Institute of Information Technology (SLIIT)
                     </p>
                 </article>
 
@@ -409,7 +415,7 @@
         <!-- SKILLS -->
         <section class="skills" id="skills">
 
-            <h2 class="section-title">Skills & Competencies</h2>
+            <h2 class="section-title">Skills &amp; Competencies</h2>
 
             <p class="section-intro">
                 Skills I have developed through my education,
@@ -465,7 +471,7 @@
             <div class="cards">
 
                 <article class="card">
-                    <h3>01. Golden Biotechnology & Bioinformatics</h3>
+                    <h3>01. Golden Biotechnology &amp; Bioinformatics</h3>
                     <p>
                         Explored the role of bioinformatics in
                         biotechnology, including the use of biological
@@ -611,15 +617,13 @@
                 my educational background and skills.
             </p>
 
-            <a class="button"
-               href="Binadi_Dulansa_CV.pdf"
-               download>
+            <a class="button" href="Binadi_Dulansa_CV.pdf" download>
                 Download My CV (PDF)
             </a>
 
             <p style="margin-top: 12px; color: var(--muted); font-size: 13px;">
-                The download button will work after the PDF resume
-                is uploaded to this repository.
+                Upload your PDF resume to the repository root using the
+                exact filename Binadi_Dulansa_CV.pdf for this button to work.
             </p>
 
         </section>
@@ -635,6 +639,7 @@
             </p>
 
             <div class="contact-box">
+
                 <h3>Let's Connect</h3>
 
                 <p>
@@ -649,9 +654,8 @@
                     Information Technology (SLIIT)
                 </p>
 
-                <p>
-                    Field: Biotechnology
-                </p>
+                <p>Field: Biotechnology</p>
+
             </div>
 
         </section>
